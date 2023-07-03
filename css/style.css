@@ -15,9 +15,9 @@ li {
 }
 
 .container {
-    min-width: 1170px;
+    min-width: 650px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 0 0 15px;
 
 }
 
@@ -25,9 +25,21 @@ body {
     font-family: 'PT Serif', serif;
     font-weight: 400;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 2rem;
     color: #5e5e5e;
+}
 
+main {
+  margin: auto;
+  width: 50%;
+}
+
+main p {
+  line-height: 1rem;
+}
+
+main h1 {
+  line-height: 2rem;
 }
 
 header {
@@ -54,7 +66,7 @@ header {
 }
 
 .header__btn::before {
-    content: "\e907"; 
+    content: "\e907";
     font-family: 'icomoon' !important;
     position: absolute;
     left: 22px;
@@ -130,7 +142,7 @@ header {
 
 .menu a:hover {
     border-color: #ffc222;
-    /* срабатывает, когда пользователь наводит элемент мышью, 
+    /* срабатывает, когда пользователь наводит элемент мышью,
     но не обязательно активирует его */
 }
 
@@ -140,4 +152,51 @@ header {
 }
 #modal{
     display: none;
+}
+
+.crop {
+  border-radius: 30%;
+  margin: 2%;
+  opacity: .9;
+  width: 90%;
+  height: 450px;
+  object-fit: cover;
+  object-position: 0% 80%;
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.crop:hover {
+  border-radius: 0%;
+  height: 500px;
+  opacity: 1;
+}
+
+.text_on_image {
+  text-align: center;
+  position: relative;
+  -webkit-transition: font-size .5s ease;
+  -moz-transition: font-size .5s ease;
+  -o-transition: font-size .5s ease;
+  transition: font-size .5s ease;
+}
+
+.text_on_image:hover {
+  position: relative;
+  font-size: 1.5em;
+}
+
+h2 {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-text-stroke: 1px #1b1b1b;
+}
+
+footer {
+  text-align: center;
+  background-color: #1b1b1b;
 }

@@ -1,13 +1,24 @@
-$(function () {
-    $('.slider__inner, .news__slider-inner').slick({
-        nextArrow: '<button type="button" class="slick-btn slick-next"></button>',
-        prevArrow: '<button type="button" class="slick-btn slick-prev"></button>',
-        infinite: false
-    });
+const typingDelay = 50;
+const secretText = 'Приглашаю целоваться ♥';
 
-    $('select').styler();
+let footerContent = null;
+let charIndex = 0;
 
-    $('.header__btn-menu').on('click', function () {
-        $('.menu ul').slideToggle();
-    });
-});
+$( document ).ready(() =>
+  {
+    footerContent = document.getElementsByTagName("h3")[0];
+  })
+
+function type() {
+  if (charIndex < secretText.length) {
+    footerContent.innerHTML += secretText.charAt(charIndex)
+    charIndex++;
+    setTimeout(type, typingDelay);
+  }
+}
+
+function easterEgg() {
+  footerContent.innerHTML = "";
+  charIndex = 0;
+  setTimeout(type, typingDelay);
+}
