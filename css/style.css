@@ -15,7 +15,7 @@ li {
 }
 
 .container {
-    min-width: 1170px;
+    min-width: 100%;
     margin: 0 auto;
     padding: 0 15px;
 
@@ -54,7 +54,7 @@ header {
 }
 
 .header__btn::before {
-    content: "\e907"; 
+    content: "\e907";
     font-family: 'icomoon' !important;
     position: absolute;
     left: 22px;
@@ -134,10 +134,59 @@ header {
     но не обязательно активирует его */
 }
 
-.menu li+li {
+.menu li {
     padding-left: 10px;
 
 }
-#modal{
+
+#modal {
     display: none;
+}
+
+.crop {
+    border-radius: 10%;
+    margin: 2% 0;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: 0% 80%;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    opacity: .9;
+}
+
+.crop:hover {
+    border-radius: 0%;
+    height: 500px;
+    opacity: 1;
+
+}
+
+.parentContainer {
+
+
+    position: relative;
+    text-align: center;
+    color: white;
+
+
+}
+
+.centered {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    right: 10%;
+    font-size: 200%;
+    line-height: 50px;
+    letter-spacing: 6px;
+
+
+}
+
+h2 {
+    font-weight: normal;
 }
